@@ -2,9 +2,8 @@
 
 class Hamster {
   constructor(name){
-    this.owner = ' ';   //dont put this in constructor because it is not dynamic
-    this.name = name;  //this in constructor beacuse acceptiong arguement for it
-    this.price = 15;
+    this.owner = ' ';
+    this.name = name;
   }
   wheelRun(){
     console.log("squeak squeak");
@@ -33,9 +32,7 @@ class Person {
     return this.name;
   }
   getAge(){
-    console.log(this.age);
     return this.age;
-
   }
   getWeight(){
     return this.weight;
@@ -56,13 +53,12 @@ class Person {
     this.weight += num;
     this.mood -= num;
     this.bankAccount += num * 10;
-    console.log(this.mood);
   }
   buyHamster(hamster){
     this.hamsters.push(hamster);
     this.mood += 10;
     this.bankAccount -= hamster.getPrice();
-    }
+  }
 }
 
 const Timmy = new Person('Timmy');
@@ -79,6 +75,6 @@ console.log("After buying hamster: " , Timmy);
 Timmy.ageUp(15);
 console.log("After aging 15 years: " , Timmy);
 Timmy.eat(2);
-console.log("After eating 2: " , Timmy);
+console.log("After eating twice: " , Timmy);
 Timmy.exercise(2);
 console.log("After exercising twice: " , Timmy);
